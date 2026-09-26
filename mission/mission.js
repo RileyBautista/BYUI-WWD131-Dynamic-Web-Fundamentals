@@ -11,6 +11,7 @@ selectElem.addEventListener('change', changeTheme);
 function changeTheme() {
     let current = selectElem.value;
     if (current == 'dark') {
+        body.classList.toggle = 'dark';
         h1.style.color = 'white';
         para.style.color = 'white';
         italic.style.color= 'white';
