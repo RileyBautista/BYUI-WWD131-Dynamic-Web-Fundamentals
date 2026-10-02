@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.varela-round-regular {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,p {
+    font-family: "Varela Round", sans-serif;
+    text-align: center;
+    color: white
+}
+
+header {
+    flex-direction: column;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a81e2;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-family: "Varela Round", sans-serif;
+}
+
+#menu {
+    color:white;
+    display: none;;
+    font-family: "Varela Round", sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+@media screen and (min-width: 700px) {
+    .menu-btn {
+        display: none;
+    }
+    #menu {
+        display: block;
+    }
+    #gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+img {
+    object-fit: cover;
+    width:300px;
+    height:300px;
+    border: white 5px solid;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.75);
+}
+
+#gallery {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cccccc;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #2a81e2;
+    font-family: "Varela Round", sans-serif;
+}
