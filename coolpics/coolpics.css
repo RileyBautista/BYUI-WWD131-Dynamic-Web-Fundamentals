@@ -40,7 +40,7 @@ a {
     color: inherit;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 850px) {
     .menu-btn {
         display: none;
     }
@@ -70,7 +70,7 @@ img {
     display: grid;
     justify-items: center;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
     padding-top: 5%;
     padding-bottom: 5%;
 }
