@@ -5,12 +5,18 @@ body {
   margin: 0;
 }
 
+
+
 .wrapper {
   max-width: 850px;
   margin: 50px auto;
   padding: 20px;
   background: white;
   border-radius: 12px;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 form {
@@ -79,6 +85,5 @@ button:hover {
 
 #output {
   margin-top: 1rem;
-  font-weight: bold;
 }
           

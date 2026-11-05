@@ -7,13 +7,13 @@
   <title>Event Form</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="event.css" />
-  <script src="forms.js" defer></script>
+  <script src="event.js" defer></script>
 </head>
 <body>
   <main class="wrapper">
     <h1>Event Ticket</h1>
 
-    <form id="fsyForm">
+    <form id="eventTicketForm">
       <div class="field">
         <label for="firstName">First Name</label>
         <input id="firstName" name="firstName" type="text" required />
@@ -30,10 +30,10 @@
       </div>
 
       <div class="field">
-        <label for="travelRange">Type</label>
+        <label for="personType">Type</label>
         <select
-          id="travelRange"
-          name="travelRange"
+          id="personType"
+          name="personType"
           aria-controls="notesContainer"
           required
         >
@@ -47,9 +47,13 @@
         <label for="availableDate">Event Date</label>
         <input id="availableDate" name="availableDate" type="date" required />
       </div>
+    <div id="i-number" class="field full" hidden>
+        <label for="iNumber">Student ID #</label>
+        <input id="iNumber" name="iNumber" type="number" />
+      </div>
 
       <div id="notesContainer" class="field full" hidden>
-        <label for="notes">Travel Notes</label>
+        <label for="notes">Access Code</label>
         <input id="notes" name="notes" type="text" />
       </div>
 
