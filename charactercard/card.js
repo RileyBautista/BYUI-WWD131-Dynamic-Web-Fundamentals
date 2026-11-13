@@ -24,6 +24,16 @@ const snortleblat = {
             characterImage.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fm%2FBSDl-JB632EAAAAC%2F67-67-meme.gif&f=1&nofb=1&ipt=61467f508912bf6bf547ac63a78dc26758208cfaa74e9deb62ede87e0906325e&ipo=images";
             characterName.textContent = "SIX SEVENNNNNNNNNNN";
             characterClass.innerHTML = '<b>Class: </b> SIX SEVENNNNNNNNNNN';
+        } else if(this.stats.level == 68){
+            characterImage.src = "snortleblat.webp";
+            characterName.textContent = "Snortleblat";
+            characterClass.innerHTML = '<b>Class: </b> Swamp Power Diplomat';
+            this.stats.health = 1000;
+            document.querySelector('#health').innerHTML = '<b>Health: </b> ' + snortleblat.stats.health;
+        } else if(this.stats.level == 100){
+            characterImage.src = "glorious_snortleblat.jpg";
+            characterName.textContent = "Glorious Snortleblat";
+            characterClass.innerHTML = '<b>Class: </b> Ultimate Swamp Power Diplomat';
         }
     }
 }
