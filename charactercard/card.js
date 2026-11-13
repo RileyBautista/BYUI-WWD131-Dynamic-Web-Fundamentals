@@ -3,7 +3,7 @@ const decreaseHealth = 20;
 const characterImage = document.querySelector('#characterImage');
 const characterName = document.querySelector('.name');
 const characterClass = document.querySelector('#characterClass');
-
+var canDie = 1;
 var startLevel = 5;
 
 const snortleblat = {
@@ -12,7 +12,7 @@ const snortleblat = {
         level: startLevel
     },
     changeHealth: function() {
-        this.stats.health -= decreaseHealth;
+        this.stats.health -= decreaseHealth*canDie;
         if(this.stats.health <= 0) {
             this.stats.health = 0;
             alert('RIP Snortleblat');
@@ -28,12 +28,19 @@ const snortleblat = {
             characterImage.src = "snortleblat.webp";
             characterName.textContent = "Snortleblat";
             characterClass.innerHTML = '<b>Class: </b> Swamp Power Diplomat';
-            this.stats.health = 1000;
-            document.querySelector('#health').innerHTML = '<b>Health: </b> ' + snortleblat.stats.health;
         } else if(this.stats.level == 100){
             characterImage.src = "glorious_snortleblat.jpg";
             characterName.textContent = "Glorious Snortleblat";
             characterClass.innerHTML = '<b>Class: </b> Ultimate Swamp Power Diplomat';
+            this.stats.health = 1000;
+            document.querySelector('#health').innerHTML = '<b>Health: </b> ' + snortleblat.stats.health;
+        } else if(this.stats.level == 200){
+            characterImage.src = "master_snortleblat.jpg";
+            characterName.textContent = "Master Snortleblat";
+            characterClass.innerHTML = '<b>Class: </b> Master Swamp Power Diplomat';
+            this.stats.health = 10000;
+            document.querySelector('#health').innerHTML = '<b>Health: </b> ' + snortleblat.stats.health;
+            canDie = 0;
         }
     }
 }
