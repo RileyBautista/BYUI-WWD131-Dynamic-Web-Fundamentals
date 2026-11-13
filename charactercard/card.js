@@ -1,5 +1,8 @@
 var startHealth = 100;
 const decreaseHealth = 20;
+const characterImage = document.querySelector('#characterImage');
+const characterName = document.querySelector('.name');
+const characterClass = document.querySelector('#characterClass');
 
 var startLevel = 5;
 
@@ -17,6 +20,11 @@ const snortleblat = {
     },
     changeLevel: function() {
         this.stats.level += 1;
+        if(this.stats.level == 67) {
+            characterImage.src = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia1.tenor.com%2Fm%2FBSDl-JB632EAAAAC%2F67-67-meme.gif&f=1&nofb=1&ipt=61467f508912bf6bf547ac63a78dc26758208cfaa74e9deb62ede87e0906325e&ipo=images";
+            characterName.textContent = "SIX SEVENNNNNNNNNNN";
+            characterClass.innerHTML = '<b>Class: </b> SIX SEVENNNNNNNNNNN';
+        }
     }
 }
 
