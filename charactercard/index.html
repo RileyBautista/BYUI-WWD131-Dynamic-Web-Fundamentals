@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="card.css">
+    <script src="card.js" defer></script>
 </head>
 <body>
     <div class="card">
@@ -12,13 +13,13 @@
         <h2 class="name">Snortleblat</h2>
         <div class="stats">
             <p><b>Class: </b> Swamp Power Diplomat</p>
-            <p><b>Level: </b> 8</p>
-            <p><b>Health: </b> 0</p>
+            <p id="level"></p>
+            <p id="health"></p>
 
-            <button class="attack-button">
+            <button class="attack-button" id="changeHealth">
                 Attack
             </button>
-            <button class="attack-button">
+            <button class="attack-button" id="changeLevel">
                 Level Up
             </button>
 
