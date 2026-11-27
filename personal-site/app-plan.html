@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>Site Plan</title>
+		<link type="text/css" rel="stylesheet" href="site-plan.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1>Personal Website Project Plan</h1>
+			<h2>Riley Bautista</h2>
+			<h2>WDD 131</h2>
+			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
+		</header>
+		<main>
+			
+			<hr />
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>This website will be a portfolio of my previous 
+                work/projects, and as a way to express myself on the internet. It will be the third iteration of my personal website available on rbautista.net! (My home server is down indefinitely, so it'll be hosted on GitHub Pages)</p>
+			<!-- change this -->
+
+			<h3>Audience</h3>
+			<p>Anyone interested in learning more about me, my projects, and organizations i'm apart of.</p>
+			<!-- change this -->
+
+			<h3>Dynamic elements</h3>
+			
+            <ol>
+                <li>Contact Me button will display a modal containing Contact Information</li>
+                <li>The image on both the home page and about page will be a randomly chosen image from an array, with exception for certain dates of meaning to me, wherewhich conditional branching will be used to show a specified image</li>
+                <li>Certifications and credentials on the homepage will be dynamically generated from a JSON file using JavaScript</li>
+                <li>The projects on the project page will also be dynamically generated from a JSON file using JavaScript</li>
+                <li>Search bar on the projects page to show specified projects, allowing for easier mobile use</li>
+            </ol>
+			<!-- change this -->
+
+			<hr />
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<img src="./assets/RB-Logo.webp" width="75%" alt="Logo image" />
+			<hr />
+			<h2>Style Guide</h2>
+
+			<h3>Color Palette</h3>
+			<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
+			Palette URL:
+			<a
+				href="https://coolors.co/253e67-fffcf0-d99b26-1a191f"
+				target="_blank"
+				>https://coolors.co/253e67-fffcf0-d99b26-1a191f</a
+			>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary</th>
+						<th>Secondary</th>
+						<th>Accent 1</th>
+						<th>Accent 2</th>
+					</tr>
+					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
+					<tr>
+						<td class="primary">[#253E67]</td>
+						<td class="secondary">[#FFFCF0]</td>
+						<td class="accent1">[#D99B26]</td>
+						<td class="accent2">[#1A191F]</td>
+					</tr>
+				</tbody>
+			</table>
+
+			
+
+			<h3>Pseudocode for your project</h3>
+
+            <ol>
+                <li>
+                    <strong>Contact Modal:</strong>
+                    <ul>
+                        <li>Select the "Contact Me" button, the modal container, and the modal close button from the DOM.</li>
+                        <li>Add a click event listener to the "Contact Me" button that removes the "hidden" class (or sets display to visible) on the modal.</li>
+                        <li>Add click event listeners to the close button and outside modal backdrop to add the "hidden" class back and close the modal.</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Dynamic Background Image</strong>
+                    <ul>
+                        <li>Create an array of general image objects (each containing an image file path and alt text).</li>
+                        <li>Get the current month and day using the JavaScript Date object.</li>
+                        <li>Use conditional branching (if / else if / else) to check if today matches a special date (e.g., birthday or robotics competition milestone):
+                            <ul>
+                                <li>If it matches, set the hero image src and alt attributes to the specific milestone image.</li>
+                                <li>Else, generate a random index using Math.floor(Math.random() * array.length) and display that random image from the array.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Dynamic Certifications & Credentials (Home Page):</strong>
+                    <ul>
+                        <li>Fetch data from JSON File</li>
+                        <li>Select the credentials container element on the home page.</li>
+                        <li>Loop through the credentials array using .forEach():
+                            <ul>
+                                <li>Create HTML card elements populated with each credential's properties.</li>
+                                <li>Append the generated HTML into the container.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Dynamic Projects Rendering (Projects Page):</strong>
+                    <ul>
+                        <li>Fetch data from projects.json containing project objects (title, image, live URL, and GitHub link).</li>
+                        <li>Create a renderProjects(projectList) function that clears the project grid container and loops through the passed array to build and insert project cards into the DOM.</li>
+                        <li>Call renderProjects(allProjects) on initial page load to display every project.</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Project Search Bar Filter:</strong>
+                    <ul>
+                        <li>Select the search input element and attach an "input" event listener.</li>
+                        <li>On user input, capture the search term and convert it to lowercase.</li>
+                        <li>Use .filter() on the projects array to return only projects whose title, description, or tech tags include the search term.</li>
+                        <li>Pass the filtered array into renderProjects() to update the displayed cards in real time.</li>
+                    </ul>
+                </li>
+            </ol>
+			<h3>Wireframes</h3>
+			<img src="./assets/wireframe.webp" width="100%" alt="wireframe image" />
+		</main>
+	</body>
+</html>
